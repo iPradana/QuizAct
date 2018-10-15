@@ -34,7 +34,7 @@ public class Main2Activity extends AppCompatActivity {
     String j = null;
     String jx = null;
     TextView txtp = null;
-    Button btnA,btnB,btnC,btnD;
+    Button btnA,btnB,btnC,btnD,btnPress;
     ArrayList<String> jawaban = new ArrayList<String>();
     Bundle extras;
 
@@ -110,8 +110,12 @@ public class Main2Activity extends AppCompatActivity {
 
         if(jx.equalsIgnoreCase(j)){
             benar++;
+            btnPress = (Button) findViewById(view.getId());
+            btnPress.setBackgroundColor(Color.GREEN);
         }else{
             salah++;
+            btnPress = (Button) findViewById(view.getId());
+            btnPress.setBackgroundColor(Color.RED);
         }
 
         Intent a = new Intent(this,Main2Activity.class);
