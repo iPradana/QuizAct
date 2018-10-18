@@ -34,7 +34,7 @@ public class Main2Activity extends AppCompatActivity {
     String j = null;
     String jx = null;
     TextView txtp = null;
-    Button btnA,btnB,btnC,btnD,btnPress;
+    Button btnA,btnB,btnC,btnD,btnPress,btnx;
     ArrayList<String> jawaban = new ArrayList<String>();
     Bundle extras;
 
@@ -98,12 +98,8 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void btnSubmit(View view){
-        switch(view.getId()){
-            case R.id.btnA: jx=btnA.getText().toString(); break;
-            case R.id.btnB: jx=btnB.getText().toString(); break;
-            case R.id.btnC: jx=btnC.getText().toString(); break;
-            case R.id.btnD: jx=btnD.getText().toString(); break;
-        }
+        btnx = (Button) findViewById(view.getId());
+        jx = btnx.getText().toString();
 
         benar = extras.getInt("benar");
         salah = extras.getInt("salah");
